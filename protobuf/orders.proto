@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option go_package = "https://github.com/sikozonpc/common/orders";
+
+
+service OrdersService {
+	rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse) {} 	
+}
+
+message Order {
+	int32 OrderID = 1;
+	int32 customerID = 2;
+	int32 ProductID = 3;
+	int32 Quantity = 4;
+}
+
+message CreateOrderRequest {
+	int32 customerID = 1;
+	int32 ProductID = 2;
+	int32 quantityID = 3;
+}
+
+message CreateOrderResponse {
+	string status = 1;
+}
+
+message GetOrdersRequest {
+	int32 customerID = 1;
+}
+
+message GetOrdersResponse {
+	repeated Order orders = 1;
+}
+
