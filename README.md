@@ -32,6 +32,8 @@ why gRPC?
 
 ---
 
+### very simple arch
+
 
 ```mermaid
 flowchart TD
@@ -44,4 +46,3 @@ flowchart TD
     Kitchen[Kitchen]
     Common[Common]
 
-    NoteGRPC --- Kitchen
